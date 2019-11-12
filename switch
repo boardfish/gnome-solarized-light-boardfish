@@ -1,0 +1,18 @@
+#!/bin/bash
+cd /usr/share/gnome-shell/theme
+pwd
+if [[ -f "gdm3-dark.css" ]]; then
+  mv gdm3.css gdm3-light.css
+  mv gdm3-dark.css gdm3.css
+  echo "Switched to dark theme."
+  # TODO: gnome-tweaks switch here
+  # TODO: switch wallpaper here
+  echo "Use Oomox to switch to the dark theme there too."
+else
+  mv gdm3.css gdm3-dark.css
+  mv gdm3-light.css gdm3.css
+  echo "Switched to light theme."
+  # TODO: gnome-tweaks switch here
+  # TODO: switch wallpaper here
+  echo "Use Oomox to switch to the light theme there too."
+fi
